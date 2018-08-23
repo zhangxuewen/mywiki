@@ -9,13 +9,30 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
 </head>
 <body>
+  <nav>
+        <a href="https://blog.51hpz.com/">BLOG</a>
+        <a href="https://blog.51hpz.com/mywiki">WIKI</a>
+  </nav>
   <div id="app">加载中</div>
   <script>
     window.$docsify = {
-      name: '',
-      repo: ''
-    }
+      loadSidebar: true,
+      loadNavbar: true,
+      name: 'ITWIKI',
+      search: {
+      maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+      paths: 'auto', // or 'auto'
+      placeholder: '你想要找什么',
+      noData: '这里没有去google看看',
+      // 搜索标题的最大程级, 1 - 6
+      depth: 2
+    },
+      repo: 'https://github.com/zhangxuewen/mywiki'
+   }
   </script>
+  <script src="//unpkg.com/docsify/lib/plugins/emoji.js"></script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify-edit-on-github@1.0.1/index.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 </body>
 </html>
